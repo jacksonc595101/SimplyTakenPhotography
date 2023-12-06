@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 100%; /* Allow the body to stretch fully on smaller screens */
+    }
+
+    .center, img {
+        width: 95%; /* Increase width of images and centered elements to take up more space */
+    }
+
+    p, h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-indent: 0; /* Adjust text indent and padding for smaller screens */
+    }
+
+    /* Add additional styles for other elements that need to be responsive */
+}
+
+/* For smaller mobile screens */
+@media screen and (max-width: 480px) {
+    .center, img {
+        width: 100%; /* Let images take full width on very small screens */
+    }
+
+    p, h1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* You might also want to adjust font sizes for smaller screens */
+    h1 {
+        font-size: 24px; /* Smaller font size for headers */
+    }
+}
+
+
+/* Header */
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+/* HTML and Body Styles */
+ 
+html{
+        background-color: lightsteelblue
+    }
+
+    body{
+        max-width: 95%;
+        margin: auto;
+        max-width: 1200px;
+        color: white;
+        background-color: rgba(26,26,26,255);
+        font-family: 'Candara', 'Arial', sans-serif;
+    }
+
+/* About Section */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2px; /* Spacing for the line, corresponds to the line height */
+}
+
+.about-section {
+    background-color: #000; /* Black background for the text section */
+    color: #fff; /* White text for readability */
+    padding: 30px;
+    flex-grow: 1; /* Flex-grow to fill the container height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-image {
+    flex-grow: 1; /* Flex-grow to fill the container height */
+    display: flex;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.separating-line {
+    height: 2px; /* Height of the line */
+    background-color: #fff; /* White line */
+    width: 100%;
+}
+
+/* Horizontal Navigation Styles */
+
+nav.horizontalNavigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav.horizontalNavigation li{
+    float: left;
+}
+
+nav.horizontalNavigation a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav.horizontalNavigation a:hover{
+    background-color: #111;
+}
+
+/* Left Column Styles */
+
+section#leftColumn{
+    clear: left;
+    float: left;
+    padding: 1.5em;
+    width: 33%;
+}
+
+
+
+/* Heading Styles */
+
+h1{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+section#contact_info h1{
+    color: white;
+    background-color: rgb(40, 59, 128);
+}
+
+
+/* Paragraph Styles */
+
+p{
+    text-indent: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+/* Image Styles */
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Image Hover Effects */
+
+/* Add this style in your <head> section or your external CSS file */
+.image-container {
+    overflow: hidden; /* Prevents the scaled image from overlapping other content */
+    position: relative; /* For z-index to work correctly */
+    z-index: 1; /* Makes sure the image is above other content when it scales */
+}
+
+.image-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    transform-origin: bottom; /* Sets the origin of the transform to the bottom of the image */
+}
+
+.image-hover:hover {
+    transform: scale(1.05); /* Scales the image to 1.05 times its size */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for emphasis */
+}
+
+/* Add padding to the bottom of the image to prevent overlap with text and adjust if necessary */
+.image-container {
+    padding-bottom: 8px; /* Adjust as needed */
+}
+
+
+/* Testimonials */
+
+.card-img-top {
+    width: 100%; /* Ensures image takes up the full width of the card */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the card area */
+}
+
+.card {
+    margin-bottom: 20px; /* Space below each card */
+}
+
+.card-body {
+    background-color: #f5f5dc; /* Creamy background color */
+    color: #333; /* Dark color for text visibility */
+    padding: 15px; /* Padding inside the card body */
+}
+
+.card-title {
+    color: #007bff; /* Bootstrap's primary color for the card title */
+    margin-bottom: 0.75rem; /* Space below the card title */
+}
+
+.card-text {
+    margin-bottom: 0; /* Remove the bottom margin from the card text for alignment */
+}
+
+/* Adjust the space above the image */
+.card-body > img:first-child {
+    margin-top: -20px; /* Negative margin to move the image up */
+}
+
+
+
+
+/* Footer Styles */
+
+footer{
+        background-color: rgb(40, 59, 128);
+        color: white;
+        color: rgba(255, 255, 255, 0.7);
+        font: normal small-caps bold 0.9em/3em 
+                Quicksand, Verdana, Geneva, sand-serif;
+        text-align: center;
+}
+
+
+/* Image Grid */
+
+.image-grid-item:hover p {
+    color: white; /* Changes the paragraph color to white on hover */
+}
+
+.image-grid-item img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+}
+
+.image-grid-item:hover img {
+    transform: scale(1.05); /* Scales the image to 1.05 times its size on hover */
+    opacity: 0.7; /* Optional: lowers the opacity to give more focus on the scale effect */
+}

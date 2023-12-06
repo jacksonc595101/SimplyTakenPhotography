@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+    /* Styles within this block will apply only to screens with a width of 768px or less */
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        /* Remove the height: 100%; if it's causing layout issues */
+    }
+    
+    body {
+        /* Reset any flexbox properties that might be affecting the layout */
+        display: block;
+    }
+    
+    .content-wrapper {
+        /* Adjust content wrapper to ensure it's not causing overflow */
+        min-height: 100vh;
+        padding: 50px 0;
+        display: block; /* Change from flex to block if flex is causing issues */
+    }
+}

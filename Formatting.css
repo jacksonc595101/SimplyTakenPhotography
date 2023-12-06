@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+
+/* Photography Categories */
+
+.image-with-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+}
+
+.image-with-text img {
+    max-width: 25%; 
+}
+        
+.text-content {
+    max-width: 55%; 
+}
+        
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-grid-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+}
+
+.image-grid-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.image-grid-item img {
+    max-width: 240px;
+    width: auto;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for smooth effect */
+}
+
+.image-grid-item:hover img {
+    transform: scale(1.05); /* Image grows slightly on hover */
+    opacity: 0.7; /* Optional: Slight fade effect on hover */
+}
+
+.image-grid-item p {
+    color: white; /* Set text color to white */
+}
+
+.image-grid-item:hover p {
+    color: white; /* Ensures text is white on hover - adjust if different color is desired */
+}
+
+/* Headings */
+
+.heading-container {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.heading-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+        
+h1{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Candara', 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Client Reviews */
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.client-review {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.client-info {
+    margin-left: 20px;
+}
+
+.client-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.client-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.client-review img {
+    max-width: 250px;
+    height: auto;
+}
+/* Carousel */
+
+.carousel-item {
+    height: 500px; /* Set a fixed height for each carousel item */
+    overflow: hidden; /* Hide the overflowed part of the images */
+  }
+  
+  .carousel-item img {
+    height: 500px; /* Set a fixed height for all images */
+    width: auto; /* Maintain the width aspect ratio */
+    object-fit: contain; /* Ensures the image fits within the given dimensions without stretching or cropping */
+    margin: auto; /* This will help center the image in the slide if there is extra space on the sides */
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+  
+
+  #familyPhotosCarousel .carousel-item {
+    height: 500px; /* ... */
+  }
+  #familyPhotosCarousel .carousel-item img {
+    /* ... */
+  }
+
+  @media (max-width: 767px) {
+    .carousel-item, .carousel-item img {
+      height: auto; /* Or set a smaller fixed height */
+      object-fit: contain; /* Ensures the image is fully visible */
+    }
+  }
+  
+  
+  
+
+/* Left-aligned text */
+.left-align {
+    text-align: left;
+}
+
